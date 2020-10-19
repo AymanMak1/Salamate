@@ -1,0 +1,761 @@
+/*******CSS Variables************/
+:root {
+  --blue-solid: #00b0ff;
+  --blue-transparent: #00a0ebc4;
+  --dark-blue-gradient: linear-gradient(#00b0ff, #005880);
+  --blue-light: #b3e6ff;
+  --dark-color: #3f3d56;
+  --light-color: #f2f2f2;
+  --salamate-solid: #ff3b5f;
+  --salamate-light: #eeccd3;
+  --light-salamate-gradient: linear-gradient(to top, #eeccd3, #ff3b5f);
+  --dark-salamate-gradient: linear-gradient(#ff3b5f, #801e30);
+  --dark-salamate: #3f3d56;
+  --pure-dark: #2f2e41;
+}
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Baloo Chettan 2", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body,
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/****************
+              Burger Menu
+            ****************/
+
+.burger {
+  position: fixed;
+  top: 15px;
+  left: 45px;
+  height: 45px;
+  width: 45px;
+  background: var(--salamate-solid);
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: left 0.5s ease;
+  z-index: 1000;
+}
+
+.burger.click {
+  left: 260px;
+}
+
+.burger i {
+  color: white;
+  font-size: 28px;
+  line-height: 45px;
+}
+
+.burger.click i:before {
+  content: "\f00d";
+}
+
+/****************
+              SideBar Menu
+            ****************/
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  background: var(--salamate-solid);
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+.sidebar.show {
+  left: 0px;
+}
+.sidebar .logo {
+  text-align: center;
+}
+nav i {
+  color: white !important;
+}
+nav ul {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+nav ul li {
+  line-height: 60px;
+  border-bottom: 1px solid var(--dark-salamate);
+}
+nav ul li:last-child {
+  border-bottom: 1px solid;
+  border-bottom: 2px solid var(--dark-salamate);
+}
+
+nav ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 16px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+}
+nav ul li a:hover,
+nav ul li.active a {
+  color: var(--dark-salamate);
+  background: #fb4466;
+  transition: all 0.5s;
+  border-left-color: var(--dark-salamate);
+}
+
+nav ul li.active ul li a {
+  border-left-color: transparent;
+  color: white;
+  background: transparent;
+}
+
+nav ul ul {
+  position: static;
+  display: none;
+}
+
+nav ul .profil-dropdown.show,
+nav ul .voyages-dropdown.show,
+nav ul .vaccins-dropdown.show {
+  display: block;
+  transition: all 0.3s;
+}
+
+nav ul ul li {
+  line-height: 42px;
+  border-bottom: none;
+}
+nav ul ul li a:hover {
+  color: var(--dark-salamate) !important;
+  background: #fb4466 !important;
+}
+
+nav ul ul li a {
+  font-size: 16px;
+  color: var(--light-color);
+  padding-left: 40px;
+}
+
+nav ul li a i.fa-caret-down {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: transform 0.5s;
+}
+
+nav ul li a i.fa-caret-down.rotate {
+  transform: translateY(-50%) rotate(-540deg);
+}
+
+.hideSection {
+  display: none;
+}
+.pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background: #ff3b5f1a;
+  border-radius: 50%;
+  pointer-events: none;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+.pointer2 {
+  transition: 0.1s;
+}
+.pointer3 {
+  transition: 0.15s;
+}
+
+a {
+  text-decoration: none !important;
+}
+/****************
+                Modals
+            ****************/
+#editTripModal .modal-header,
+#editProfilModal .modal-header {
+  background: var(--salamate-solid);
+  color: white;
+}
+
+label {
+  display: block;
+  letter-spacing: 2px;
+  margin-bottom: 12px !important;
+  color: #3f3d56;
+}
+label span {
+  margin-bottom: 12px;
+}
+#formEditProfil span {
+  font-size: 9px;
+  display: block;
+  margin-top: 8px;
+  color: #858796;
+  letter-spacing: 0px;
+}
+
+.btn-salamate,
+.btn-dark-salamate {
+  background: var(--salamate-solid);
+  color: white;
+}
+
+.btn-dark-salamate {
+  background: var(--dark-salamate);
+}
+
+.btn-salamate:hover,
+.btn-dark-salamate:hover {
+  color: var(--salamate-light);
+  transition: 0.3s ease;
+}
+
+.swal2-popup {
+  transform: scale(1.6);
+}
+
+/****************
+                Accueil
+            ****************/
+
+#accueil {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+#accueilContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  grid-gap: 200px;
+}
+#welcomeText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10rem;
+  line-height: 2.5;
+}
+#welcomeText h1 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+  color: var(--salamate-solid);
+}
+#welcomeText h3 {
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+  color: var(--dark-salamate);
+  font-weight: 600;
+}
+#welcomeText h3 span {
+  display: block;
+  margin: 8px 0 8px 0;
+}
+#showcaseImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#showcaseImg img {
+  width: 100%;
+}
+
+img.bg {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  opacity: 0.3;
+}
+
+/****************
+                add trip
+            ****************/
+
+#wrapper {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 50rem;
+  background-color: white;
+  position: relative;
+  padding: 10rem 0;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  z-index: 50;
+}
+
+.form-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30rem;
+  background: var(--light-salamate-gradient);
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  z-index: -1;
+}
+
+.form-heading {
+  color: #fff;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 3.5rem;
+  left: 16.5rem;
+}
+
+form#addTripForm {
+  transform: translateX(10rem);
+  padding: 2rem 0;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 1px 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+form#addTripForm span.label {
+  font-size: 14px;
+  display: block;
+  margin-top: 1rem;
+  margin-left: 1rem;
+
+  color: #a1a1aa;
+  text-align: left;
+  font-weight: 500;
+}
+
+.input-group {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: baseline;
+}
+
+.input-group select,
+.input-group input {
+  position: relative;
+  width: 90%;
+  padding: 1rem 0;
+  outline: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--dark-salamate);
+}
+
+.input-group > i {
+  font-size: 2rem;
+  color: var(--salamate-solid);
+  margin-right: 1rem;
+}
+
+.input-group .bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 1px;
+  border-radius: 100%;
+}
+
+.input-group .bar::before {
+  content: "";
+  position: absolute;
+  background-color: var(--salamate-solid);
+  width: 0;
+  height: 2px;
+  transition: width 650ms;
+}
+
+.input-group select:focus + .bar::before,
+.input-group input:focus + .bar::before {
+  width: 100%;
+}
+
+.input-group button {
+  margin: 2rem auto;
+  padding: 1rem 6rem;
+  background: var(--light-salamate-gradient);
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  border-radius: 3rem;
+}
+
+.input-group button:hover,
+.input-group button:focus {
+  background: linear-gradient(to bottom, #eeccd3, #ff3b5f);
+}
+
+.allTripsLink {
+  text-align: center;
+}
+.allTripsLink a {
+  text-decoration: none;
+  color: #a1a1a1;
+  font-size: 1.5rem;
+  transition: all 0.4s;
+}
+.allTripsLink a:hover {
+  color: var(--salamate-solid);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/************************
+            List Trips & Avis
+        *************************/
+.listTripForVaccinesContainer::before,
+.listAvisContainer::before,
+.listTripsContainer::before {
+  height: 10rem;
+  margin-bottom: 30px;
+}
+
+.listAvisHeading,
+.listTripsHeading {
+  left: 18.5rem;
+}
+
+.listAvisHeading {
+  left: 17rem;
+}
+.listTripsForVaccinesHeading {
+  left: 12.5rem;
+}
+.tripForVaccine,
+.avis,
+.trip {
+  pointer-events: cursor;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 5px 15px 15px;
+  height: 80px;
+}
+.avisTitle,
+.tripName {
+  flex-basis: 70%;
+  font-size: 2rem;
+}
+.avisTitle {
+  flex-basis: 60%;
+  font-weight: 500;
+}
+.avisPublicationDate {
+  margin-right: 16px;
+}
+.avisInfosIcon i,
+.crudTripIcons i {
+  margin-right: 12px;
+  font-size: 20px;
+  color: #ff3b5f;
+  cursor: pointer;
+}
+.crudTripIcons i:last-of-type {
+  margin-right: 0;
+}
+
+.listAvisContainer,
+.listTripsContainer {
+  overflow-y: auto;
+  height: 60%;
+}
+.listAvisContainer hr,
+.listTripsContainer hr {
+  position: absolute;
+  top: 60%;
+  border: 1px solid #a1a1a150;
+  width: 90%;
+}
+.noAvisShow,
+.noTripsShow,
+.noTripsForVaccineShow {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.2rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 50%;
+}
+.noTripForVaccinesHide,
+.noAvisHide,
+.noTripsHide {
+  display: none;
+}
+.nav-link {
+  cursor: pointer;
+}
+.containerListTripsForVaccinesSection {
+  width: 80vw;
+  position: relative;
+  height: 80vh;
+  margin-top: 100px;
+  left: 10%;
+  background-color: white;
+  border-radius: 40px;
+  /* padding: 60px 35px 35px 35px;   */
+  box-shadow: inset 8px 8px 8px #eeccd3, inset -8px -8px 8px #eeccd3;
+  overflow-y: scroll;
+}
+.containerListTripsForVaccinesSection .wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.containerListTripsForVaccinesSection .sectionTitle {
+  position: absolute;
+  top: 5%;
+  color: #ff3b5f;
+}
+.containerListTripsForVaccinesSection .sectionTitle h3 {
+  font-size: 3.5rem;
+}
+
+.containerListTripsForVaccinesSection .tripForVaccinesContainer {
+  width: 100%;
+  position: absolute;
+  top: 7%;
+  padding: 60px 35px 35px 35px;
+}
+.containerListTripsForVaccinesSection
+  .tripForVaccinesContainer
+  .rowTripsForVaccines {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /*repeat(
+        auto-fit,
+        minmax(546px, 1fr)
+      );*/
+  grid-gap: 50px;
+  margin-bottom: 50px;
+}
+
+.containerListTripsForVaccinesSection
+  .tripForVaccinesContainer
+  .rowTripsForVaccines
+  div.tripForVaccines {
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url("../imgs/bgVaccines.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  height: 275px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  color: white;
+  letter-spacing: 2px;
+}
+.containerListTripsForVaccinesSection
+  .tripForVaccinesContainer
+  .rowTripsForVaccines
+  div.tripForVaccines
+  span {
+  display: block;
+  margin-bottom: 25px;
+}
+.containerListTripsForVaccinesSection
+  .tripForVaccinesContainer
+  .rowTripsForVaccines
+  div.tripForVaccines
+  button {
+  background-color: #ff3b5f;
+  color: white;
+  transition: all 0.3s;
+}
+.containerListTripsForVaccinesSection
+  .tripForVaccinesContainer
+  .rowTripsForVaccines
+  div.tripForVaccines
+  button:hover {
+  background-color: #3f3d56;
+}
+
+.containerListTripsForVaccinesSection
+  .tripForVaccinesContainer
+  .rowTripsForVaccines
+  div.tripForVaccines
+  span:first-of-type {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.swal2-popup {
+  transform: scale(1) !important;
+  font-size: 1.6rem !important;
+}
+
+/***************************************************
+    recommendedVaccines & travel notices modal
+  ****************************************************/
+.travelNotice,
+.recommendedVaccine {
+  line-height: 1.6;
+}
+.recommendedVaccine hr {
+  font-size: 1.5em;
+}
+.travelNotice div:not(:first-of-type),
+.recommendedVaccine div {
+  margin-bottom: 12px;
+}
+.travelNoticeTitle,
+.vaccineName {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ff3b5f;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+.travelNoticePublicationDate,
+.diseaseName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3f3d56;
+}
+
+.recommendedVaccine button:first-of-type {
+  background-color: #3f3d56;
+  color: white !important;
+  transition: all 0.3s;
+}
+.recommendedVaccine button:first-of-type:hover {
+  background-color: #ff3b5f;
+  color: white;
+}
+.recommendedVaccine button:nth-of-type(2):hover {
+  background-color: #3f3d56;
+  color: white;
+  transition: all 0.3s;
+}
+
+.recommendedVaccine button.completedVaccineBtn {
+  background-color: #28a745;
+  color: white !important;
+  transition: all 0.3s;
+  pointer-events: none;
+  pointer: none;
+}
+
+.hideit {
+  display: none;
+}
+.showit {
+  display: inline-block;
+}
+/********************
+          Media Queries
+      *********************/
+
+@media screen and (max-width: 1024px) {
+  #accueilContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+  #showcaseImg {
+    padding-left: 10rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #welcomeText {
+    margin-top: 10rem;
+    margin-bottom: -10rem;
+  }
+  .form-container::before {
+    height: 10rem;
+  }
+  .form-heading {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  form#addTripForm {
+    border-radius: initial;
+    transform: initial;
+    box-shadow: none;
+  }
+  .containerListTripsForVaccinesSection
+    .tripForVaccinesContainer
+    .rowTripsForVaccines {
+    grid-template-columns: 1fr;
+  }
+  .recommendedVaccine button {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #showcaseImg {
+    display: none;
+  }
+  #welcomeText {
+    margin-bottom: 0rem;
+    padding-left: 5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-heading {
+    font-size: 1.9rem;
+  }
+  .crudTripIcons i {
+    margin-right: 10px;
+  }
+  .containerListTripsForVaccinesSection .sectionTitle h3 {
+    font-size: 2.8rem;
+  }
+  .containerListTripsForVaccinesSection {
+    width: 100vw;
+    left: 0%;
+  }
+  .containerListTripsForVaccinesSection .tripForVaccinesContainer {
+    padding: 60px 15px 35px 15px;
+  }
+}
+@media screen and (max-width: 360px) {
+}

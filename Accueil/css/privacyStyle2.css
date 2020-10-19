@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&display=swap");
+/*******CSS Variables************/
+:root {
+  --blue-solid: #00b0ff;
+  --blue-transparent: #00a0ebc4;
+  --dark-blue-gradient: linear-gradient(#00b0ff, #005880);
+  --blue-light: #b3e6ff;
+  --dark-color: #3f3d56;
+  --light-color: #f2f2f2;
+  --salamate-solid: #ff3b5f;
+  --salamate-light: #eeccd340;
+  --light-salamate-gradient: linear-gradient(#eeccd3, #ff3b5f);
+  --dark-salamate-gradient: linear-gradient(#ff3b5f, #801e30);
+  --dark-salamate: #3f3d56;
+  --pure-dark: #2f2e41;
+}
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.container-flex {
+  padding: 10rem 5rem;
+}
+section#showcase {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  min-height: 800px;
+}
+
+section.goodbyeCase {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 600px !important;
+}
+
+section#showcase .img,
+section.goodbyeCase .img {
+  flex-basis: 50%;
+  width: 100%;
+}
+section#showcase .img img,
+section.goodbyeCase .img img {
+  max-width: 80%;
+}
+section#showcase .showcase-txt {
+  display: inline-block;
+  align-items: center;
+  flex-basis: 50%;
+}
+
+section#showcase .showcase-txt h1.title {
+  display: block;
+  margin-bottom: 16px;
+}
+
+section#terms {
+  width: 100%;
+  text-align: right;
+  line-height: 1.4;
+  font-family: "Baloo Chettan 2", cursive;
+}
+
+section#terms ul li {
+  padding-left: 25px;
+  list-style: inside;
+  color: var(--salamate-solid);
+}
+section#terms .term {
+  margin-bottom: 50px;
+}
+section#terms .term:nth-of-type(even) {
+  text-align: left;
+}
+section#terms h1.title {
+  font-size: 2.2rem;
+}
+
+section#terms hr {
+  border: 1px solid;
+  color: var(--salamate-solid);
+  margin-bottom: 16px;
+}
+
+img.bg {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 767px) {
+  section#showcase {
+    display: block;
+  }
+  section#showcase .img img,
+  section.goodbyeCase .img img {
+    max-width: 100%;
+  }
+  section#showcase .img img {
+    margin-bottom: 50px;
+  }
+  section.goodbyeCase .showcase-txt {
+    margin-bottom: 2rem;
+  }
+  section.goodbyeCase {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+  .container-flex {
+    padding: 10rem 5rem;
+  }
+  .container-flex {
+    padding: 10rem 2rem;
+  }
+}

@@ -1,0 +1,196 @@
+﻿idcountry,idcontinent,abrCountry,countryNameFr,countryNameEng
+1,1,CN,Chine,China
+2,1,IN,Inde,India
+3,1,ID,Indonésie,Indonesia
+4,1,PK,Pakistan,Pakistan
+5,1,BD,Bangladesh,Bangladesh
+6,1,JP,Japan,Japan
+7,1,PH,Philippines,Philippines
+8,1,VN,Vietnam,Vietnam
+9,1,TR,Turquie,Turkey
+10,1,IR,Iran,Iran
+11,1,TH,Thailand,Thailand
+12,1,MM,Myanmar,Myanmar
+13,1,KR,Corée du sud,South Korea
+14,1,IQ,Iraq,Iraq
+15,1,AF,Afghanistan,Afghanistan
+16,1,SA,Arabie Saoudite,Saudi Arabia
+17,1,UZ,Uzbekistan,Uzbekistan
+18,1,MY,Malaisie,Malaysia
+19,1,YE,Yemen,Yemen
+20,1,NP,Népal,Nepal
+21,1,KP,Corée du nord,North Korea
+22,1,LK,Sri Lanka,Sri Lanka
+23,1,KZ,Kazakhstan,Kazakhstan
+24,1,SY,Syrie,Syria
+25,1,KH,Cambodge,Cambodia
+26,1,JO,Jordanie,Jordan
+27,1,AZ,Azerbaijan,Azerbaijan
+28,1,AE,Emirats arabes unis,United Arab Emirates
+29,1,TJ,Tajikistan,Tajikistan
+30,1,IL,Israel,Israel
+31,1,LA,Laos,Laos
+32,1,LB,Liban,Lebanon
+33,1,KG,Kirghizstan,Kyrgyzstan
+34,1,TM,Turkmenistan,Turkmenistan
+35,1,SG,Singapore,Singapore
+36,1,OM,Oman,Oman
+37,1,PS,Palestine,State of palestine
+38,1,KW,Koweït,Kuwait
+39,1,GE,Géorgie,Georgia
+40,1,MN,Mongolie,Mongolia
+41,1,AM,Arménie,Armenia
+42,1,QA,Qatar,Qatar
+43,1,BH,Bahreïn,Bahrain
+44,1,TL,Timor-Leste,Timor-Leste
+45,1,CY,Chypres,Cyprus
+46,1,BT,Bhoutan,Bhutan
+47,1,MV,Maldives,Maldives
+48,1,BN,Brunei,Brunei
+49,2,NG,Nigeria,Nigeria
+50,2,ET,Ethiopie,Ethiopia
+51,2,EG,Egypte,Egypt
+52,2,CG,République Démocratique du Congo,DR Congo
+53,2,TZ,Tanzanie,Tanzania
+54,2,ZA,Afrique du Sud,South Africa
+55,2,KE,Kenya,Kenya
+56,2,UG,Uganda,Uganda
+57,2,DZ,Algérie,Algeria
+58,2,SD,Soudan,Sudan
+59,2,MA,Maroc,Morocco
+60,2,AO,Angola,Angola
+61,2,MZ,Mozambique,Mozambique
+62,2,GH,Ghana,Ghana
+63,2,MG,Madagascar,Madagascar
+64,2,CM,Cameroun,Cameron
+65,2,CI,Côte d'Ivoire,Côte d'Ivoire
+66,2,NE,Niger,Niger
+67,2,BF,Burkina Faso,Burkina Faso
+68,2,ML,Mali,Mali
+69,2,MW,Malawi,Malawi
+70,2,ZM,Zambie,Zambia
+71,2,SN,Sénégal,Senegal
+72,2,TD,tChad,Chad
+73,2,SO,Somalie,Somalia
+74,2,ZW,Zimbabwe,Zimbabwe
+75,2,GN,Guinée,Guinea
+76,2,RW,Rwanda,Rwanda
+77,2,B,Bénin,Benin
+78,2,BI,Burundi,Burundi
+79,2,TN,Tunisie,Tunisia
+80,2,SD,Sudan du sud,South Sudan
+81,2,TG,Togo,Togo
+82,2,SL,Sierra Leone,Sierra Leone
+83,2,LY,Libye,Libya
+84,2,CG,Congo,Congo
+85,2,LR,Liberia,Liberia 
+86,2,CF,République Centrafricaine,Central African Republic 
+87,2,MR,Mauritanie,Mauritania
+88,2,ER,Erithrée,Eritrea
+89,2,NA,Namibie,Namibia
+90,2,GM,Gambie,Gambia
+91,2,BW,Botswana,Botswana
+92,2,GA,Gabon,Gabon
+93,2,LS,Lesotho,Lesotho
+94,2,GW,Guinée-Bissau,Guinea-Bissau
+95,2,GQ, Guinée équatoriale,Equatorial Guinea
+96,2,MU,Mauritius,Mauritius
+97,2,SZ,Eswatini,Eswatini
+98,2,DJ,Djibouti,Djibouti
+99,2,KM,Comores,Comoros
+100,2,CV,Cap vert,Cabo Verde
+101,2,ST,Sao Tome Et Principe,Sao Tome & Principe
+102,2,SC,Seychelles,Seychelles
+103,3,RU,Russie,Russia
+104,3,DE,Allemagne,Germany
+105,3,UK,Royaume uni,United Kingdom
+106,3,FR,France,France
+107,3,IT,Italie,Italy
+108,3,ES,Espagne,Spain
+109,3,UA,Ukraine,Ukraine
+110,3,PL,Pologne,Poland
+111,3,RO,Roumanie,Romania
+112,3,NL,Pays-Bas,Netherlands
+113,3,BE,Bélgique,Belgium
+114,3,CZ,République Tchèque,Czech Republic (Czechia)
+115,3,GE,Grèce,Greece
+116,3,PT,Portugal,Portugal
+117,3,SE,Suède,Sweden
+118,3,HU,Hongrie,Hungary
+119,3,BV,Biélorussie,Belarus
+120,3,AT,Autriche,Austria
+121,3,CS,Serbie,Serbia
+122,3,CH,Suisse,Switzerland 
+123,3,BG,Bulgarie,Bulgaria
+124,3,DK,Danemark,Denmark
+125,3,FI,Finlande,Finland 
+126,3,SK,Slovaquie,Slovakia 
+127,3,NO,Norvège,Norway
+128,3,IE,Irlande,Ireland
+129,3,HR,Croatie,Croatia
+130,3,MD,Moldavie,Moldova
+131,3,BA,Bosnie-Herzégovine,Bosnia and Herzegovina 
+132,3,AL,Albanie,Albania
+133,3,LT,Lithuanie,Lithuania
+134,3,MK,Macédoine,North Macedonia
+135,3,SI,Slovénie,Slovenia
+136,3,LV,Lativia,Latvia
+137,3,EE,Estonie,Estonia
+138,3,ME,Monténégro,Montenegro
+139,3,LU,Luxembourg,Luxembourg
+140,3,MT,Malte,Malta
+141,3,IS,Islande,Iceland
+142,3,AD,Andorre,Andorra
+143,3,MC,Monaco,Monaco
+144,3,LI,Liechtenstein,Liechtenstein
+145,3,SM,Saint-Marin,San Marino
+146,3,VA,Holy See,Holy See
+147,4,BR,Brézil,Brazil
+148,4,CO,Colombie,Colombia
+149,4,AR,Argentine,Argentina
+150,4,PE,Pérou,Peru
+151,4,VE,Vénézuela,Venezuela
+152,4,CL,Chili,Chile
+153,4,EC,Equateur,Ecuador
+154,4,BO,Bolivie,Bolivia
+155,4,PY,Paraguay,Paraguay
+156,4,UY,Uruguay,Uruguay
+157,4,GY,Guyana,Guyana
+158,4,SR,Suriname,Suriname
+159,5,US,Etats-Unis,USA
+160,5,CA,Canada,Canada
+161,5,MX,Mexique,Mexico
+162,5,GT,Guatemala,Guatemala
+163,5,BZ,Belize,Belize
+164,5,HN,Honduras,Honduras
+165,5,SV,Salvador,El Salvador
+166,5,NI,Nicaragua,Nicaragua
+167,5,CR,Costa Rica,Costa Rica
+168,5,PA,Panama,Panama
+169,5,BS,Bahamas,Bahamas
+170,5,CU,Cuba,Cuba
+171,5,JM,Jamaïque,Jamaica
+172,5,HT,Haïti,Haiti
+173,5,DO,République Dominicaine,Dominican Republic
+174,5,KN,St. Kitts and Nevis,St. Kitts and Nevis
+175,5,AG,Antigua and Barbuda,Antigua and Barbuda
+176,5,DM,Dominica,Dominica
+177,5,LC,St. Lucia,St. Lucia
+178,5,BB,Barbados,Barbados
+179,5,VC,Saint-Vincent-et-les-Grenadines,St. Vincent and the Grenadines
+180,5,GD,Grenade,Grenada
+181,5,TT,Trinité-et-Tobago,Trinidad and Tobago
+182,6,AU,Australie,Australia
+183,6,PG,Papouasie-Nouvelle-Guinée,Papua New Guinea
+184,6,NZ,Nouvelle-Zélande,New Zealand
+185,6,FJ,Fiji,Fiji
+186,6,SB,Iles Salomon,Solomon Islands
+187,6,VU,Vanuatu,Vanuatu 
+188,6,WS,Samoa,Samoa
+189,6,KI,Kiribati,Kiribati
+190,6,FM,Micronésie,Micronesia
+191,6,TO,Tonga,Tonga
+192,6,MH,Iles Marshall ,Marshall Islands
+193,6,PW,Palau,Palau
+194,6,TV,Tuvalu,Tuvalu
+195,6,NR,Nauru,Nauru

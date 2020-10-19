@@ -1,0 +1,485 @@
+/*CSS VARIABLES*/
+:root {
+  --dark-color: #3f3d56;
+  --light-color: #f2f2f2;
+  --salamate-solid: #ff3b5f;
+  --salamate-light: #eeccd3;
+  --light-salamate-gradient: linear-gradient(to right, #eeccd3, #ff3b5f);
+  --dark-salamate-gradient: linear-gradient(to right, #ff3b5f, #ff6a85);
+  --dark-salamate: #3f3d56;
+  --pure-dark: #2f2e41;
+}
+/*Universal Style*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+input:required {
+  box-shadow: none;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 7rem;
+  padding: 0 2rem;
+}
+
+.FormsLinks {
+  display: flex;
+  justify-content: flex-end;
+}
+
+span {
+  color: #b1b1b1;
+  margin: 20px 30px 0 0;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+span:hover {
+  color: var(--salamate-solid);
+}
+span[class*="swal"] {
+  margin: 0;
+}
+
+/*
+h2.title:before,
+h2.title:after {
+  content: "";
+  display: inline-block;
+  background: url("../imgs/Salamate2Logo.png") no-repeat;
+  background-size: auto;
+  background-size: contain;
+}
+h2.title:before {
+  margin-right: 8px;
+  margin-top: 8px;
+}
+h2.title:after {
+  margin-left: 5px;
+}
+*/
+
+/************
+  Left Col : bgImg
+***********/
+.wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bg img {
+  width: 100%;
+}
+
+a.toLandingPage {
+  display: block;
+}
+a.toLandingPage img.logo {
+  position: absolute;
+  left: 5%;
+}
+
+/*********************************
+ Right Col : login & SignUp Form
+**********************************/
+
+.login-content,
+.signUp-content {
+  width: 100%;
+  height: 100vh;
+}
+.avatar {
+  transition: all 0.5s;
+}
+/*Login*/
+
+.login-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.login-content form {
+  width: 550px;
+}
+
+.login-content img {
+  height: 100px;
+}
+
+.login-content h2 {
+  margin: 15px 0;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+}
+
+.login-content .input-div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 7% 93%;
+  margin: 25px 0;
+  padding: 5px 0;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.login-content .input-div.one {
+  margin-top: 0;
+}
+
+.i {
+  color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.i i {
+  transition: 0.3s;
+}
+
+.input-div > div {
+  position: relative;
+  height: 45px;
+}
+
+.input-div > div > h5 {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.input-div:before,
+.input-div:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--salamate-solid);
+  transition: 0.4s;
+}
+
+.input-div:before {
+  right: 50%;
+}
+
+.input-div:after {
+  left: 50%;
+}
+
+.input-div.focus:before,
+.input-div.focus:after {
+  width: 50%;
+}
+
+.input-div.focus > div > h5 {
+  top: -5px;
+  font-size: 15px;
+}
+
+.input-div.focus > .i > i {
+  color: var(--salamate-solid);
+}
+
+.input-div > div > input {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.5rem 0.7rem;
+  /*font-size: 15px;*/
+  color: #555;
+  font-family: "poppins", sans-serif;
+}
+
+.input-div.pass {
+  margin-bottom: 4px;
+}
+
+a {
+  display: inline-block;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: #999;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--salamate-solid);
+}
+
+.submitBtn {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  background-image: var(--dark-salamate-gradient);
+  background-size: 200%;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn:hover {
+  background-position: right;
+}
+
+.googleBtn {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0 12px 0;
+}
+button i {
+  margin-right: 8px;
+}
+button {
+  display: block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/*SignUp Content*/
+
+.signUp-content {
+  transform: scale(0.7);
+  margin-bottom: 50px;
+}
+.googleBtn {
+  transform: scale(1.2);
+}
+.rowInput {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+}
+.signUp-content form {
+  width: 700px;
+}
+
+i.fa-google {
+  color: var(--salamate-solid);
+  font-weight: 900;
+}
+
+span.termsLabel:not(.terms) {
+  cursor: default;
+}
+span a.terms {
+  color: var(--dark-salamate);
+}
+span a.terms:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+input[type="checkbox"] {
+  width: 30px;
+}
+
+/*Errors Span*/
+
+.error,
+.success {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  color: #cc0000;
+  font-size: 14px;
+  pointer-events: none;
+  display: none;
+}
+.success {
+  font-size: 20px;
+  bottom: 30px;
+  left: 100%;
+}
+.success:before,
+.error:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f12a";
+  position: absolute;
+  left: -20px;
+  opacity: 0.7;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #cc0000;
+}
+.success {
+  color: #4bb543;
+}
+.success:before {
+  content: "\f00c";
+  color: #4bb543;
+}
+
+/* updated style*/
+
+.input-div.nationality > div > h5,
+.input-div.birth > div > h5 {
+  top: -1px;
+}
+div.nationalite,
+div.birth {
+  position: relative;
+}
+select#nationalite {
+  font-size: 14px;
+  color: #555;
+  font-family: "poppins", sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  outline: none;
+  top: 50%;
+  width: 100%;
+  border: none;
+  left: 2%;
+}
+
+.avatar:hover {
+  opacity: 0.7;
+}
+
+/**********************
+    Media queries
+**********************/
+
+@media screen and (max-width: 1460px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 0rem;
+  }
+  .login-content {
+    justify-content: center;
+    border-radius: 16px;
+  }
+  .signUp-content form {
+    width: 100%;
+  }
+  form .btn {
+    width: 65%;
+  }
+  .login-content h2 {
+    font-size: 2.4rem;
+    margin: 8px 0;
+  }
+  .bg {
+    display: none;
+  }
+
+  .wave {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  span.showLoginForm,
+  span.showSignUpForm {
+    font-size: 10px;
+  }
+  span.termsLabel {
+    font-size: 12px;
+  }
+  .login-content h2 {
+    font-size: 1.6rem;
+    margin: 8px 0;
+  }
+  form .btn {
+    font-size: 1rem;
+    height: 40px;
+    width: 90%;
+  }
+
+  .login-content .input-div > div > h5 {
+    font-size: 12px;
+  }
+
+  .login-content form {
+    width: 90%;
+  }
+
+  .signUp-content form {
+    width: 100% !important;
+  }
+
+  .rowInput {
+    grid-template-columns: 1fr 1fr;
+  }
+  .login-content .input-div {
+    padding: 0;
+    margin: 16px 0;
+  }
+  .error {
+    font-size: 13px;
+    bottom: -25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .error {
+    font-size: 9.5px;
+    bottom: -20px;
+  }
+}
+@media screen and (max-width: 360px) {
+  span[class*="swal"] {
+    margin: 0;
+  }
+  .error {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .signUp-content {
+    transform: scale(0.6);
+  }
+  span.showSignUpForm {
+    font-size: 8.5px;
+  }
+  span[class*="swal"] {
+    margin: 0;
+  }
+}
